@@ -572,6 +572,50 @@
     .btn-primary, .btn-ghost { padding: 0.85rem 1.5rem; font-size: 0.68rem; }
     section { padding: 3.5rem 5%; }
   }
+
+  /* Contenedor del Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilo del botón/enlace principal */
+.dropbtn {
+    text-decoration: none;
+    padding: 5px;
+    display: block;
+}
+
+/* Caja del menú oculto */
+.dropdown-content {
+    display: none; /* Se oculta por defecto */
+    position: absolute;
+    background-color: #000c24; /* El azul oscuro de tu navbar */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-top: 2px solid #A68945; /* Línea dorada superior para elegancia */
+}
+
+/* Enlaces dentro del menú desplegable */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+
+/* Cambio de color al pasar el mouse por los items */
+.dropdown-content a:hover {
+    background-color: #A68945; /* Fondo dorado al seleccionar */
+    color: #000c24; /* Texto azul oscuro al seleccionar */
+}
+
+/* Mostrar el menú al pasar el mouse por el contenedor */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 </style>
 </head>
 <body>
@@ -583,7 +627,13 @@
     <span class="nav-logo-kc">KC · INMOBILIARIA</span>
   </a>
   <ul class="nav-links">
-    <li><a href="#propiedades">Propiedades</a></li>
+    <li class="dropdown">
+    <a href="#" class="dropbtn">PROPIEDADES <i class="fas fa-caret-down"></i></a>
+    <div class="dropdown-content">
+        <a href="casas-lotes.html">Casas y Lotes</a>
+        <a href="vehiculos.html">Vehículos</a>
+    </div>
+</li>
     <li><a href="#servicios">Servicios</a></li>
     <li><a href="#nosotros">Nosotros</a></li>
     <li><a href="#proceso">Proceso</a></li>
