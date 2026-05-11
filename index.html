@@ -616,6 +616,86 @@
 .dropdown:hover .dropdown-content {
     display: block;
 }
+/*aqui va el css del form
+/* Estenedor de acciones del CTA */
+.cta-actions {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-actions h2 {
+    color: #d4af37; /* Dorado */
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Formulario */
+#form-agendar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: 800px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Inputs, Select y Textarea */
+#form-agendar input, 
+#form-agendar select, 
+#form-agendar textarea {
+    background: rgba(255, 255, 255, 0.03); /* Fondo casi invisible para elegancia */
+    border: 1px solid rgba(212, 175, 87, 0.4); /* Dorado sutil */
+    color: #fff;
+    padding: 14px;
+    border-radius: 2px; /* Bordes más rectos = más lujo */
+    font-family: 'Montserrat', sans-serif; /* O la que estés usando */
+    font-size: 0.9rem;
+    flex: 1 1 200px; /* Se ajustan solos */
+}
+
+#form-agendar textarea {
+    flex: 1 1 100%; /* El área de texto ocupa todo el ancho */
+    height: 80px;
+    resize: none;
+}
+
+/* Dropdown del select */
+#form-agendar select option {
+    background-color: #0a1128; /* Tu fondo azul oscuro */
+    color: #fff;
+}
+
+/* Botón de Acción */
+#btn-enviar {
+    background: #d4af37;
+    color: #0a1128;
+    border: 1px solid #d4af37;
+    padding: 15px 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+#btn-enviar:hover {
+    background: transparent;
+    color: #d4af37;
+    box-shadow: 0 0 15px rgba(212, 175, 87, 0.3);
+}
+
+/* Estados de Error/Carga */
+#btn-enviar:disabled {
+    opacity: 0.5;
+    cursor: wait;
+}
+
+
 </style>
 </head>
 <body>
@@ -768,7 +848,7 @@
           <div class="slide-price">$ 980.000.000</div>
           <div class="slide-actions">
             <a href="#" class="btn-primary">Ver detalles</a>
-            <a href="https://wa.me/573001234567" class="btn-ghost">Consultar</a>
+            <a href="https://wa.me/" class="btn-ghost">Consultar</a>
           </div>
         </div>
         <div class="slide-badge">
@@ -810,12 +890,12 @@
 </div>
 
 <!-- STATS -->
-<div class="stats-bar">
+<!-- <div class="stats-bar">
   <div class="stat-item"><div class="stat-num">340+</div><div class="stat-label">Propiedades vendidas</div></div>
   <div class="stat-item"><div class="stat-num">98%</div><div class="stat-label">Clientes satisfechos</div></div>
   <div class="stat-item"><div class="stat-num">12</div><div class="stat-label">Ciudades en Colombia</div></div>
   <div class="stat-item"><div class="stat-num">$2.4B</div><div class="stat-label">En transacciones 2024</div></div>
-</div>
+</div> -->
 
 <!-- SERVICES -->
 <section class="services" id="servicios">
@@ -865,8 +945,10 @@
   </div>
   <div class="about-content">
     <div class="section-label">¿Quiénes somos?</div>
-    <h2 class="section-title" style="color:white;">Más que una agencia,<br>somos <em>tu aliado</em><br>de confianza</h2>
-    <p class="about-body">Ventas y Cambalaches KC nació con la convicción de que toda transacción inmobiliaria debe ser justa, transparente y beneficiosa para todas las partes. Somos especialistas tanto en compraventas tradicionales como en permutas y cambalaches — una opción inteligente que pocos dominan en el mercado colombiano.</p>
+    <h2 class="section-title" style="color:white;"> Rapidez, confianza y soluciones<br>a tus inversiones y ventas en<em> finca raiz</em><br></h2>
+    <p class="about-body">Empresa dedicada a la comercialización de bienes raíces en Villavicencio, especializada en la intermediación de compra, venta y permuta de propiedades residenciales, comerciales y rurales, al igual que de vehiculos particulares. Cuenta con un equipo con amplio conocimiento del mercado local, lo que permite brindar asesoría integral y personalizada a cada cliente, garantizando procesos transparentes, seguros y ajustados a sus necesidades y expectativas.
+
+La compañía se enfoca en ofrecer soluciones inmobiliarias eficientes, apoyándose en estrategias de mercadeo, valoración técnica de inmuebles y acompañamiento durante todas las etapas de la negociación. Su compromiso está orientado a generar confianza, optimizar la inversión de sus clientes, consolidándose como un aliado confiable en el sector inmobiliario de Villavicencio.</p>
     <ul class="about-features">
       <li>Equipo con más de 15 años en el sector inmobiliario colombiano</li>
       <li>Expertos en permutas y cambalaches entre propietarios</li>
@@ -901,13 +983,26 @@
   </div>
 </section>-->
 
-<!-- CTA -->
+<!-- Agendar cita -->
 <section class="cta-section" id="contacto">
   <div class="section-label cta-label">¿Listo para comenzar?</div>
   <h2 class="cta-title">Tu próxima propiedad<br>te está <em>esperando</em></h2>
   <p class="cta-desc">Agenda una consulta gratuita. Ya sea venta o cambalache — tenemos la solución para ti.</p>
   <div class="cta-actions">
-    <a href="https://wa.me/573001234567" class="btn-primary">WhatsApp</a>
+    <!-- Sección de Agendar Cita -->
+    <h2>Agendar una Cita</h2>
+    <form id="form-agendar">
+        <input type="text" name="user_name" placeholder="Tu Nombre Completo" required>
+        <input type="email" name="user_email" placeholder="Tu Correo Electrónico" required>
+        <select name="servicio" required>
+            <option value="" disabled selected>Selecciona un servicio</option>
+            <option value="Compra">Compra de Propiedad</option>
+            <option value="Venta">Venta de Propiedad</option>
+            <option value="Cambalache">Cambalache / Permuta</option>
+        </select>
+        <textarea name="message" placeholder="Cuéntanos más sobre la propiedad o auto..." required></textarea>
+        <button type="submit" id="btn-enviar">Solicitar Cita</button>
+    </form> 
   </div>
 </section>
 
@@ -1010,6 +1105,36 @@ document.querySelectorAll('.mobile-link, .mobile-cta').forEach(link => {
     setTimeout(() => { mobileMenu.style.display = 'none'; }, 350);
   });
 });
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+   (function(){
+      // Reemplaza con tu Public Key de EmailJS
+      emailjs.init("TU_PUBLIC_KEY");
+   })();
+
+   const btn = document.getElementById('btn-enviar');
+
+   document.getElementById('form-agendar')
+    .addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      btn.innerText = 'Enviando...';
+
+      const serviceID = 'default_service';
+      const templateID = 'TU_TEMPLATE_ID';
+
+      emailjs.sendForm(serviceID, templateID, this)
+       .then(() => {
+         btn.innerText = '¡Cita Solicitada!';
+         alert('Gracias. Nos pondremos en contacto contigo pronto.');
+         this.reset();
+       }, (err) => {
+         btn.innerText = 'Error al enviar';
+         alert(JSON.stringify(err));
+       });
+   });
 </script>
 </body>
 </html>
