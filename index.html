@@ -55,151 +55,83 @@
   <a href="#contacto" class="mobile-cta">Agenda una cita</a>
 </div>
 
-<!-- HERO CAROUSEL -->
 <div class="hero">
+    <div class="carousel-track" id="track">
+        <div class="carousel-slide">
+            <div class="slide-bg" style="background-image:url('img/propiedades/lote_restrepo_cumaral_1.webp')"></div>
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <div class="slide-info">
+                    <span class="slide-tag">Escritura Individual</span>
+                    <h1 class="slide-name">Lote <em>Restrepo</em></h1>
+                    <div class="slide-location">Vía Restrepo - Cumaral | 6.000 m²</div>
+                    <div class="slide-price">$ 350.000.000 <small>Negociables</small></div>
+                    <div class="slide-actions">
+                        <a href="#contacto" class="btn-primary">Solicitar Información</a>
+                        <a href="https://wa.me/57TU_NUMERO" class="btn-ghost">WhatsApp</a>
+                    </div>
+                </div>
 
-  <div class="carousel-track" id="track">
+                <div class="slide-badge">
+                    <div class="badge-num">6.000</div>
+                    <div class="badge-label">Metros <br> Cuadrados</div>
+                </div>
+            </div>
+        </div>
 
-    <!-- Slide 1 -->
-    <div class="carousel-slide active">
-      <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1800&q=90')"></div>
-      <div class="slide-overlay"></div>
-      <div class="slide-accent"></div>
-      <div class="slide-content">
-        <div class="slide-info">
-          <div class="slide-label">Propiedad Destacada</div>
-          <span class="slide-tag">En Venta</span>
-          <h1 class="slide-name">Casa <em>El Poblado</em></h1>
-          <div class="slide-location">El Poblado · Medellín, Antioquia</div>
-          <div class="slide-details">
-            <span class="slide-detail">5 habitaciones</span>
-            <span class="slide-detail">4 baños</span>
-            <span class="slide-detail">380 m²</span>
-            <span class="slide-detail">Piscina privada</span>
-          </div>
-          <div class="slide-price">$ 1.850.000.000</div>
-          <div class="slide-actions">
-            <a href="#" class="btn-primary">Ver detalles</a>
-            <a href="https://wa.me/573001234567" class="btn-ghost">Consultar</a>
-          </div>
+        <div class="carousel-slide">
+            <div class="slide-bg" style="background-image:url('img/propiedades/lote_restrepo_cumaral_2.webp')"></div>
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <div class="slide-info">
+                    <span class="slide-tag">Documentación al día</span>
+                    <h1 class="slide-name">Ubicación <em>Privilegiada</em></h1>
+                    <div class="slide-location">Sector de Alta Valorización | Predial Pago</div>
+                    <div class="slide-actions">
+                        <a href="#contacto" class="btn-primary">Ver Ubicación</a>
+                    </div>
+                </div>
+
+                <div class="slide-badge">
+                    <div class="badge-num">01</div>
+                    <div class="badge-label">Escritura <br> Individual</div>
+                </div>
+            </div>
         </div>
-        <div class="slide-badge">
-          <div class="badge-num">340+</div>
-          <div class="badge-label">Propiedades<br>gestionadas</div>
+
+        <div class="carousel-slide">
+            <div class="slide-bg" style="background-image:url('img/propiedades/lote_restrepo_cumaral_3.webp')"></div>
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <div class="slide-info">
+                    <span class="slide-tag">Gran Extensión</span>
+                    <h1 class="slide-name">6.000 <em>Metros²</em></h1>
+                    <div class="slide-location">Ideal para Casa Campestre o Inversión</div>
+                    <div class="slide-actions">
+                        <a href="#contacto" class="btn-primary">Contactar Ahora</a>
+                    </div>
+                </div>
+
+                <div class="slide-badge">
+                    <div class="badge-num">100%</div>
+                    <div class="badge-label">Terreno <br> Plano</div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
-    <!-- Slide 2 -->
-    <div class="carousel-slide">
-      <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1800&q=90')"></div>
-      <div class="slide-overlay"></div>
-      <div class="slide-accent"></div>
-      <div class="slide-content">
-        <div class="slide-info">
-          <div class="slide-label">Exclusividad Premium</div>
-          <span class="slide-tag">En Venta</span>
-          <h1 class="slide-name">Villa <em>Campestre</em></h1>
-          <div class="slide-location">Cajicá · Cundinamarca</div>
-          <div class="slide-details">
-            <span class="slide-detail">6 habitaciones</span>
-            <span class="slide-detail">5 baños</span>
-            <span class="slide-detail">520 m²</span>
-            <span class="slide-detail">Jardín 2.000 m²</span>
-          </div>
-          <div class="slide-price">$ 2.200.000.000</div>
-          <div class="slide-actions">
-            <a href="#" class="btn-primary">Ver detalles</a>
-            <a href="https://wa.me/573001234567" class="btn-ghost">Consultar</a>
-          </div>
-        </div>
-        <div class="slide-badge">
-          <div class="badge-num">98%</div>
-          <div class="badge-label">Clientes<br>satisfechos</div>
-        </div>
-      </div>
+    <button class="carousel-arrow prev" id="prevBtn">&#8592;</button>
+    <button class="carousel-arrow next" id="nextBtn">&#8594;</button>
+
+    <div class="carousel-dots" id="dots">
+        <button class="carousel-dot active" data-idx="0"></button>
+        <button class="carousel-dot" data-idx="1"></button>
+        <button class="carousel-dot" data-idx="2"></button>
     </div>
 
-    <!-- Slide 3 -->
-    <div class="carousel-slide">
-      <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1800&q=85')"></div>
-      <div class="slide-overlay"></div>
-      <div class="slide-accent"></div>
-      <div class="slide-content">
-        <div class="slide-info">
-          <div class="slide-label">Vida en altura</div>
-          <span class="slide-tag">En Venta</span>
-          <h1 class="slide-name">Penthouse <em>Chicó</em></h1>
-          <div class="slide-location">Chicó Norte · Bogotá, D.C.</div>
-          <div class="slide-details">
-            <span class="slide-detail">3 habitaciones</span>
-            <span class="slide-detail">2 baños</span>
-            <span class="slide-detail">145 m²</span>
-            <span class="slide-detail">Vista panorámica</span>
-          </div>
-          <div class="slide-price">$ 8.500.000 <small style="font-size:1rem;opacity:.7">/ mes</small></div>
-          <div class="slide-actions">
-            <a href="#" class="btn-primary">Ver detalles</a>
-            <a href="https://wa.me/573001234567" class="btn-ghost">Consultar</a>
-          </div>
-        </div>
-        <div class="slide-badge">
-          <div class="badge-num">12</div>
-          <div class="badge-label">Ciudades en<br>Colombia</div>
-        </div>
-      </div>
-    </div>
+    <div class="slide-counter" id="counter"><span>01</span> / 03</div>
 
-    <!-- Slide 4 -->
-    <div class="carousel-slide">
-      <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=1800&q=85')"></div>
-      <div class="slide-overlay"></div>
-      <div class="slide-accent"></div>
-      <div class="slide-content">
-        <div class="slide-info">
-          <div class="slide-label">Oportunidad de Inversión</div>
-          <span class="slide-tag">En Venta</span>
-          <h1 class="slide-name">Casa <em>Laureles</em></h1>
-          <div class="slide-location">Laureles · Medellín, Antioquia</div>
-          <div class="slide-details">
-            <span class="slide-detail">4 habitaciones</span>
-            <span class="slide-detail">3 baños</span>
-            <span class="slide-detail">220 m²</span>
-            <span class="slide-detail">Terraza BBQ</span>
-          </div>
-          <div class="slide-price">$ 980.000.000</div>
-          <div class="slide-actions">
-            <a href="#" class="btn-primary">Ver detalles</a>
-            <a href="https://wa.me/" class="btn-ghost">Consultar</a>
-          </div>
-        </div>
-        <div class="slide-badge">
-          <div class="badge-num">15+</div>
-          <div class="badge-label">Años de<br>experiencia</div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Arrows -->
-  <button class="carousel-arrow prev" id="prevBtn">&#8592;</button>
-  <button class="carousel-arrow next" id="nextBtn">&#8594;</button>
-
-  <!-- Dots -->
-  <div class="carousel-dots" id="dots">
-    <button class="carousel-dot active" data-idx="0"></button>
-    <button class="carousel-dot" data-idx="1"></button>
-    <button class="carousel-dot" data-idx="2"></button>
-    <button class="carousel-dot" data-idx="3"></button>
-  </div>
-
-  <!-- Counter -->
-  <div class="slide-counter" id="counter"><span>01</span> / 04</div>
-
-  <!-- Progress bar -->
-  <div class="carousel-progress" id="progress"></div>
-
+    <div class="carousel-progress" id="progress"></div>
 </div>
 
 <!-- SEARCH BAR -->
@@ -237,15 +169,15 @@
   </div>
 </section>
 
-<!-- PROPERTIES -->
-<section class="properties" id="propiedades">
+<!-- Propiedades destacadas -->
+<!--<section class="properties" id="propiedades">
   <div class="properties-header">
     <div><div class="section-label">Portafolio</div><h2 class="section-title">Propiedades <em>destacadas</em></h2></div>
     <a href="#" class="btn-primary" style="white-space:nowrap;">Ver todas</a>
   </div>
   <div class="properties-grid">
     <div class="prop-main prop-card">
-      <img class="prop-card-img" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=85" alt="">
+      <img class="prop-card-img" src="img/propiedades/lote_restrepo_cumaral_1.webp" alt="">
       <div class="prop-info"><span class="prop-tag">En venta</span><div class="prop-name">Casa El Poblado</div><div class="prop-location">El Poblado · Medellín, Antioquia</div><div class="prop-details"><span>5 hab.</span><span>4 baños</span><span>380 m²</span><span>Piscina</span></div><div class="prop-price">$ 1.850.000.000</div></div>
     </div>
     <div class="prop-card">
@@ -257,6 +189,48 @@
       <div class="prop-info"><span class="prop-tag">En venta</span><div class="prop-name">Casa Laureles</div><div class="prop-location">Laureles · Medellín, Antioquia</div><div class="prop-details"><span>4 hab.</span><span>3 baños</span><span>220 m²</span></div><div class="prop-price">$ 980.000.000</div></div>
     </div>
   </div>
+</section>-->
+
+<section class="properties" id="propiedades">
+    <div class="properties-header">
+        <div>
+            <span class="section-label">Oportunidades</span>
+            <h2 class="section-title">Propiedades <em>Destacadas</em></h2>
+        </div>
+    </div>
+
+    <div class="properties-grid">
+        <div class="prop-card prop-main">
+            <img src="img/propiedades/lote_restrepo_cumaral_1.webp" alt="Lote Restrepo" class="prop-card-img">
+            <div class="prop-info">
+                <span class="prop-tag">Disponible</span>
+                <h3 class="prop-name">Lote Restrepo</h3>
+                <p class="prop-location">Vía Restrepo - Cumaral</p>
+                <div class="prop-price">$ 350.000.000</div>
+                <a href="https://wa.me/573XXXXXXXXX?text=Hola%20KC%20Inmobiliaria,%20me%20interesa%20el%20Lote%20Restrepo%20de%20350M.%20¿Me%20pueden%20dar%20más%20información?" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.6rem; margin-top: 1rem; display: inline-block;">Escribenos</a>
+            </div>
+        </div>
+
+        <div class="prop-card">
+            <img src="img/propiedades/lote_venta.webp" alt="Vende con nosotros" class="prop-card-img" style="filter: brightness(0.4) sepia(0.2);">
+            <div class="prop-info">
+                <span class="prop-tag" style="background: var(--navy); color: var(--gold);">Servicio VIP</span>
+                <h3 class="prop-name">¿Quieres <em>Vender?</em></h3>
+                <p class="prop-location">Publicamos tu propiedad con fotografía profesional y drones.</p>
+                <a href="#contacto" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.6rem; margin-top: 1rem; display: inline-block;">Consúltanos</a>
+            </div>
+        </div>
+
+        <div class="prop-card">
+            <img src="img/propiedades/gestion.webp" alt="Buscamos propiedades" class="prop-card-img" style="filter: brightness(0.4);">
+            <div class="prop-info">
+                <span class="prop-tag" style="background: var(--gold); color: var(--navy);">Buscamos Lotes</span>
+                <h3 class="prop-name">Gestión <em>Inmobiliaria</em></h3>
+                <p class="prop-location">Tenemos clientes buscando lotes y casas en el Meta.</p>
+                <a href="https://wa.me/573XXXXXXXXX?text=Hola%20KC%20Inmobiliaria,%20quiero%20vender%20una%20propiedad%20en%20el%20Meta%20y%20necesito%20asesoría." class="btn-ghost" style="padding: 0.5rem 1rem; font-size: 0.6rem; margin-top: 1rem; display: inline-block; border-color: var(--gold); color: var(--gold);">Enviar WhatsApp</a>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- ABOUT -->
