@@ -94,3 +94,37 @@ if (hamburger && mobileMenu) {
     });
 }
 
+/* Funcion de busqueda */
+
+function ejecutarBusqueda() {
+    // 1. Capturamos los valores
+    const tipo = document.getElementById('search-tipo').value;
+    const operacion = document.getElementById('search-operacion').value;
+    const textoInput = document.getElementById('search-text').value.toLowerCase();
+    
+    console.log("--- INICIANDO FILTRADO ---");
+    console.log("Buscando:", tipo, operacion, textoInput);
+
+    // 2. Seleccionamos las tarjetas
+    const tarjetas = document.querySelectorAll('.prop-card');
+
+    tarjetas.forEach((tarjeta) => {
+        const contenidoVisible = tarjeta.innerText.toLowerCase();
+        
+        // 3. Lógica de comparación
+        const coincideTipo = (tipo === "todos" || tarjeta.classList.contains(tipo));
+        const coincideOperacion = (operacion === "todos" || tarjeta.classList.contains(operacion));
+        const coincideTexto = (textoInput === "" || contenidoVisible.includes(textoInput));
+
+        // 4. Aplicar visibilidad con !important para ganarle al CSS
+        if (coincideTipo && coincideOperacion && coincideTexto) {
+            tarjeta.style.setProperty('display', 'block', 'important');
+            tarjeta.style.opacity = "1";
+        } else {
+            tarjeta.style.setProperty('display', 'none', 'important');
+            tarjeta.style.opacity = "0";
+        }
+    });
+    
+    console.log("--- FILTRADO FINALIZADO ---");
+}
