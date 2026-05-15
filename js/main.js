@@ -128,3 +128,25 @@ function ejecutarBusqueda() {
     
     console.log("--- FILTRADO FINALIZADO ---");
 }
+
+/* FUNCIÓN: LIMPIAR FILTROS */
+function limpiarFiltros() {
+    // 1. Restablecemos los valores de los inputs/selects del HTML
+    if (document.getElementById('search-text')) document.getElementById('search-text').value = "";
+    if (document.getElementById('search-tipo')) document.getElementById('search-tipo').value = "todos";
+    if (document.getElementById('search-operacion')) document.getElementById('search-operacion').value = "todos";
+    if (document.getElementById('search-precio')) document.getElementById('search-precio').value = "todos";
+
+    // 2. Ocultamos el mensaje de "no resultados" por si estaba activo
+    const mensajeNoResultados = document.getElementById('no-results');
+    if (mensajeNoResultados) mensajeNoResultados.style.display = "none";
+
+    // 3. Volvemos a mostrar TODAS las tarjetas de propiedades
+    const tarjetas = document.querySelectorAll('.prop-card');
+    tarjetas.forEach(tarjeta => {
+        tarjeta.style.setProperty('display', 'block', 'important');
+        tarjeta.style.opacity = "1";
+    });
+    
+    console.log("Filtros reiniciados exitosamente.");
+}
