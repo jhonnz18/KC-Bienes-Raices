@@ -1,6 +1,6 @@
 // 1. Inicialización con tu Public Key confirmada
 (function() {
-    emailjs.init("dEexcssfsdcM2Vq9mKvtS"); 
+    emailjs.init("ZRuh7Q31bINQACQ1B"); 
 })();
 
 // 2. Función Global para cerrar el modal de éxito
