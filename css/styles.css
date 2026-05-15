@@ -815,22 +815,37 @@
     100% { transform: scale(1.6); opacity: 0; }
 }
 
+/* Espaciado por defecto (se aplica a móviles y PC) */
 .search-btn {
-    margin-bottom: 0.2rem; /* Ajusta este valor a tu gusto para dar aire */
+    /* En móviles, si se apilan, se separan verticalmente */
+    margin-bottom: 0.4rem; 
 }
 
-.clear-btn {
-    background-color: transparent;
-    color: #666;
-    border: 1px solid #ccc;
-    padding: 10px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+/* Ajuste exclusivo para pantallas grandes (PC) */
+@media (min-width: 992px) {
+    .search-btn {
+        margin-bottom: 0;      /* Quitamos el margen de abajo en PC */
+        margin-right: 0.4rem;  /* Separación horizontal perfecta entre Buscar y Limpiar */
+    }
 }
 
-.clear-btn:hover {
-    background-color: #f5f5f5;
-    color: var(--navy);
-    border-color: var(--navy);
+/* Estilo para la X de cierre */
+.close-menu {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: none;
+  border: none;
+  color: var(--gold, #d4af37); /* Usa tu variable de dorado o blanco */
+  font-size: 2.5rem;           /* Un tamaño cómodo para el pulgar */
+  line-height: 1;
+  cursor: pointer;
+  z-index: 1010;               /* Asegura que quede por encima de los links */
+  padding: 5px 10px;
+}
+
+/* Asegurar que el contenedor sea el punto de referencia */
+.mobile-menu {
+  position: fixed; /* O absolute, según como lo tengas */
+  /* Tu estilo existente (top, left, width, height, etc.) debe mantenerse */
 }

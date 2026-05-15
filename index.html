@@ -48,12 +48,14 @@
   </button>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#propiedades" class="mobile-link">Propiedades</a>
-  <a href="#servicios" class="mobile-link">Servicios</a>
-  <a href="#nosotros" class="mobile-link">Nosotros</a>
-  <a href="#proceso" class="mobile-link">Proceso</a>
-  <a href="#contacto" class="mobile-link">Contacto</a>
-  <a href="#contacto" class="mobile-cta">Agenda una cita</a>
+  <button class="close-menu" onclick="toggleMenu()">&times;</button>
+
+  <a href="#propiedades" class="mobile-link" onclick="toggleMenu()">Propiedades</a>
+  <a href="vehiculos.html" class="mobile-link" onclick="toggleMenu()">Vehículos</a> <a href="#servicios" class="mobile-link" onclick="toggleMenu()">Servicios</a>
+  <a href="#nosotros" class="mobile-link" onclick="toggleMenu()">Nosotros</a>
+  <a href="#proceso" class="mobile-link" onclick="toggleMenu()">Proceso</a>
+  <a href="#contacto" class="mobile-link" onclick="toggleMenu()">Contacto</a>
+  <a href="#contacto" class="mobile-cta" onclick="toggleMenu()">Agenda una cita</a>
 </div>
 
 <div class="hero">

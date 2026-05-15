@@ -150,3 +150,21 @@ function limpiarFiltros() {
     
     console.log("Filtros reiniciados exitosamente.");
 }
+
+function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    
+    // Si manejas la visibilidad con una clase CSS (Recomendado para transiciones suaves)
+    if (menu.classList.contains('active')) {
+        menu.classList.remove('active');
+    } else {
+        menu.classList.add('active');
+    }
+    /* O si lo manejas directo con display, descomenta esto:
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
+    */
+}
