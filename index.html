@@ -71,7 +71,7 @@
                     <div class="slide-price">$ 350.000.000 <small>Negociables</small></div>
                     <div class="slide-actions">
                         <a href="#contacto" class="btn-primary">Solicitar Información</a>
-                        <a href="https://wa.me/573138341671?text=Hola%20KC%20Inmobiliaria,%20me%20interesa%20el%20Lote%20Restrepo%20de%20350M.%20¿Me%20podrían%20dar%20más%20información?" class="btn-ghost">WhatsApp</a>
+                        <a href="https://wa.me/573138341671?text=Hola%20KC%20Bienes%20Ra%C3%ADces,%20me%20interesa%20la%20Casa%20Campestre%20Sol%20del%20Llano" target="_blank" class="btn-primary">Ver Detalles</a>
                     </div>
                 </div>
 
@@ -91,9 +91,7 @@
                     <h1 class="slide-name">Ubicación <em>Privilegiada</em></h1>
                     <div class="slide-location">Sector de Alta Valorización | Predial Pago</div>
                     <div class="slide-actions">
-                        <a href="https://wa.me/573138341671?text=Hola,%20vi%20el%20Lote%20en%20Restrepo%20en%20la%20web%20y%20me%20interesaría%20conocerlo." class="btn-primary">Ver Ubicación</a>
-                    </div>
-                </div>
+                        <a href="https://wa.me/573138341671?text=Hola%20KC%20Bienes%20Ra%C3%ADces,%20me%20interesa%20la%20Casa%20Campestre%20Sol%20del%20Llano" target="_blank" class="btn-primary">Ver Detalles</a>
 
                 <div class="slide-badge">
                     <div class="badge-num">01</div>
@@ -111,7 +109,7 @@
                     <h1 class="slide-name">6.000 <em>Metros²</em></h1>
                     <div class="slide-location">Ideal para Casa Campestre o Inversión</div>
                     <div class="slide-actions">
-                        <a href="https://wa.me/573138341671?text=Hola,%20vi%20el%20Lote%20en%20Restrepo%20en%20la%20web%20y%20me%20interesaría%20conocerlo." class="btn-primary">Contactar Ahora</a>
+                        <a href="https://wa.me/573138341671?text=Hola%20KC%20Bienes%20Ra%C3%ADces,%20me%20interesa%20la%20Casa%20Campestre%20Sol%20del%20Llano" target="_blank" class="btn-primary">Ver Detalles</a>
                     </div>
                 </div>
 
@@ -140,14 +138,14 @@
   <!-- Barra de busqueda -->
   <div class="search-bar">
     <input id="search-text" class="search-field" type="text" placeholder="Ciudad, barrio o referencia...">
-    <select id="search-tipo" class="search-select">
+    <select id="search-tipo" class="search-select" onchange="ejecutarBusqueda()">
       <option value="todos">Tipo de inmueble</option>
       <option value="casa">Casa</option>
       <option value="apartamento">Apartamento</option>
       <option value="lote">Lote</option>
     </select>
 
-    <select id="search-operacion" class="search-select">
+    <select id="search-operacion" class="search-select" onchange="ejecutarBusqueda()">
       <option value="todos">Operación</option>
       <option value="venta">En Venta</option>
       <option value="cambalache">Cambalache</option>
@@ -181,7 +179,7 @@
     </div>
 
 <div class="properties-grid">
-    <div class="prop-card casa venta"> <img src="img/propiedades/Propiedad 2_1.jpeg" alt="Casa Campestre Sol del Llano Puerto López" class="prop-card-img">
+    <div class="prop-card casa venta"> <img src="img/propiedades/Propiedad 2_1.jpeg" alt="Casa Campestre Sol del Llano Puerto López" class="prop-card-img" loading="lazy">
         <div class="prop-info">
             <span class="prop-tag">Oportunidad Única</span>
             <h3 class="prop-name">Casa Campestre <em>Sol del Llano</em></h3>
@@ -189,14 +187,14 @@
             </div>
     </div>
 
-    <div class="prop-card apartamento venta"> <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80" alt="Apartamento de Lujo Villavicencio" class="prop-card-img">
+    <div class="prop-card apartamento venta"> <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80" alt="Apartamento de Lujo Villavicencio" class="prop-card-img" loading="lazy">
         <div class="prop-info">
             <span class="prop-tag">Próximamente</span>
             <h3 class="prop-name">Apartamento <em>Penthouse</em></h3>
             </div>
     </div>
 
-    <div class="prop-card lote venta"> <img src="img/propiedades/lote_venta.webp" alt="Vende con nosotros" class="prop-card-img">
+    <div class="prop-card lote venta"> <img src="img/propiedades/lote_venta.webp" alt="Vende con nosotros" class="prop-card-img" loading="lazy">
         <div class="prop-info">
             <span class="prop-tag">Servicio VIP</span>
             <h3 class="prop-name">¿Quieres <em>Vender?</em></h3>
@@ -331,9 +329,10 @@ La compañía se enfoca en ofrecer soluciones inmobiliarias eficientes, apoyánd
 <div class="contact-strip">
   <div class="contact-strip-text">Estamos disponibles para ti</div>
   <div class="contact-strip-info">
-    <div class="contact-item"><span class="contact-item-label">Teléfono</span>+57 300 123 4567</div>
+    <div class="contact-item"><span class="contact-item-label">Teléfono</span>300 123 4567 - 323 587 9723</div>
     <div class="contact-item"><span class="contact-item-label">Correo</span>ventasycambalacheskc@gmail.com</div>
-    <div class="contact-item"><span class="contact-item-label">Horario</span>Lun – Sáb · 8am – 7pm</div>
+    <div class="contact-item"><span class="contact-item-label">Horario</span>Lunes – viernes · 8am – 5pm</div>
+    <div class="contact-item"><span class="contact-item-label"></span>Sábado · 8am – 12pm</div>
   </div>
 </div>
 
@@ -364,9 +363,38 @@ La compañía se enfoca en ofrecer soluciones inmobiliarias eficientes, apoyánd
 </footer>
 </div>
 <!-- boton de whatsapp-->
-<a href="https://wa.me/573138341671?text=Hola%20KC%20Bienes%20Raíces,%20estoy%20navegando%20en%20la%20web%20y%20me%20gustaría%20recibir%20asesoría%20sobre%20una%20propiedad." class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-</a>
+<div class="whatsapp-container">
+    <div class="whatsapp-menu" id="waMenu">
+        <div class="wa-menu-header">
+            <h4>¿Con quién deseas hablar?</h4>
+            <p>Selecciona uno de nuestras líneas</p>
+        </div>
+        
+        <a href="https://wa.me/573142214771?text=Hola%20KC%20Bienes%20Raíces,%20me%20interesa%20recibir%20información%20sobre%20las%20propiedades." target="_blank" class="wa-menu-item">
+            <div class="wa-icon-box Inmobiliario">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="wa-item-info">
+                <strong>Línea de Atención 1</strong>
+                <span>Disponible</span>
+            </div>
+        </a>
+        
+        <a href="https://wa.me/573235879723?text=Hola%20KC%20Bienes%20Raíces,%20me%20interesa%20recibir%20información%20sobre%20las%20propiedades." target="_blank" class="wa-menu-item">
+            <div class="wa-icon-box Inmobiliario">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="wa-item-info">
+                <strong>Línea de Atención 2</strong>
+                <span>Disponible</span>
+            </div>
+        </a>
+    </div>
+    
+    <button class="whatsapp-btn-trigger" onclick="toggleWhatsAppMenu()" aria-label="Abrir chat de WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </button>
+</div>
 </body>
 <script src="js/main.js"></script>
 <script src="js/contact.js"></script>

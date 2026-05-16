@@ -168,3 +168,24 @@ function toggleMenu() {
     }
     */
 }
+
+/*Funcion Menu asesores Whatsapp*/ 
+
+function toggleWhatsAppMenu() {
+    const waMenu = document.getElementById('waMenu');
+    if (waMenu) {
+        waMenu.classList.toggle('active');
+    }
+}
+
+// Cierre opcional: Si hacen clic fuera del menú, este se cierra solo
+document.addEventListener('click', function(event) {
+    const container = document.querySelector('.whatsapp-container');
+    const waMenu = document.getElementById('waMenu');
+    
+    if (container && !container.contains(event.target)) {
+        if (waMenu && waMenu.classList.contains('active')) {
+            waMenu.classList.remove('active');
+        }
+    }
+});

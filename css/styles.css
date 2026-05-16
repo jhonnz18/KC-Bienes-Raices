@@ -771,51 +771,130 @@
 }
 
 /* Botón Flotante de WhatsApp */
-.whatsapp-float {
+
+.whatsapp-container {
     position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 2000;
+    font-family: sans-serif;
+}
+
+/* --- BOTÓN DISPARADOR PRINCIPAL --- */
+.whatsapp-btn-trigger {
+    background-color: #25d366;
+    color: white;
+    border: none;
     width: 60px;
     height: 60px;
-    bottom: 40px;
-    right: 40px;
-    background-color: #25d366;
-    color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
-    z-index: 1000;
+    border-radius: 50%;
+    font-size: 32px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
-    text-decoration: none;
+    transition: transform 0.3s ease;
 }
 
-.whatsapp-float:hover {
+.whatsapp-btn-trigger:hover {
     transform: scale(1.1);
-    background-color: #128C7E;
-    color: #FFF;
 }
 
-/* Animación de pulso opcional */
-.whatsapp-float::before {
-    content: "";
+/* --- MENÚ DE ASESORES --- */
+.whatsapp-menu {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
+    bottom: 75px;
+    right: 0;
+    width: 280px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Clase que activa el menú desde JS */
+.whatsapp-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Encabezado del menú (Línea Azul de la marca) */
+.wa-menu-header {
+    background-color: #0c1c30; /* Cambia por tu variable --navy si la usas */
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.wa-menu-header h4 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #e5c158; /* Cambia por tu variable --gold si la usas */
+}
+
+.wa-menu-header p {
+    margin: 5px 0 0 0;
+    font-size: 11px;
+    opacity: 0.8;
+}
+
+/* Items/Opciones del Menú */
+.wa-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+
+.wa-menu-item:last-child {
+    border-bottom: none;
+}
+
+.wa-menu-item:hover {
+    background-color: #fafafa;
+}
+
+/* Iconos internos verdes de WhatsApp */
+.wa-icon-box {
     background-color: #25d366;
-    opacity: 0.7;
-    animation: pulse-whatsapp 2s infinite;
-    z-index: -1;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-right: 12px;
+    flex-shrink: 0;
 }
 
-@keyframes pulse-whatsapp {
-    0% { transform: scale(1); opacity: 0.7; }
-    100% { transform: scale(1.6); opacity: 0; }
+.wa-item-info {
+    display: flex;
+    flex-direction: column;
 }
 
-/* Espaciado por defecto (se aplica a móviles y PC) */
+.wa-item-info strong {
+    font-size: 14px;
+    color: #0c1c30;
+}
+
+.wa-item-info span {
+    font-size: 11px;
+    color: #777;
+}
+
+/* Espaciado para  botenes buscar y limpiar (se aplica a móviles y PC) */
 .search-btn {
     /* En móviles, si se apilan, se separan verticalmente */
     margin-bottom: 0.4rem; 
